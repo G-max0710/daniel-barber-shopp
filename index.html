@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Barber Shop | Barbearia em Goiânia – Adulto e Kids</title>
+<meta name="description" content="Daniel Barber Shop, barbearia em Goiânia há 5 anos. Cabelo, barba e bigode para adultos e área kids separada. Veja os cortes, os valores e agende com seu barbeiro.">
+<meta name="theme-color" content="#0d0d0d">
+<meta property="og:title" content="Daniel Barber Shop | Goiânia">
+<meta property="og:description" content="Barba, cabelo e bigode. Área adulta e Kids Club. Agende pelo site.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Baloo+2:wght@600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Daniel Barber Shop",
+  "description": "Barbearia com área adulta e área kids em Goiânia.",
+  "telephone": "+5562994401007",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Otávio Lúcio, QD 1, LT 15",
+    "addressLocality": "Goiânia",
+    "addressRegion": "GO",
+    "postalCode": "74475-260",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.instagram.com/danielbarbershopp"],
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"14:00","closes":"19:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday"],"opens":"09:00","closes":"19:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday"],"opens":"08:00","closes":"19:00"}
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#0d0d0d;
+  --paper:#f6f3ee;
+  --gold:#b8955a;
+  --gold-soft:#d9c29a;
+  --line:rgba(255,255,255,.14);
+  --kids-blue:#2f7de1;
+  --kids-sky:#dcebf8;
+  --kids-yellow:#ffc21a;
+  --kids-red:#ee3b3b;
+  --kids-green:#3cb54a;
+  --kids-orange:#f58a1f;
+  --radius:14px;
+  --head:'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body:'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --script:'Yellowtail', cursive;
+  --kidfont:'Baloo 2', 'Barlow', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--body);background:var(--ink);color:#fff;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+.eyebrow{font-family:var(--head);letter-spacing:.28em;text-transform:uppercase;font-size:.85rem;color:var(--gold)}
+h1,h2,h3{font-family:var(--head);text-transform:uppercase;line-height:1;letter-spacing:.02em}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);margin:.4rem 0 1rem}
+.script{font-family:var(--script);font-weight:400;text-transform:none;letter-spacing:0}
+
+/* Header */
+header.top{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(13,13,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.brand .name{font-family:var(--script);font-size:1.7rem;line-height:1}
+.brand .name small{font-family:var(--head);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;display:block;color:var(--gold-soft);margin-top:2px}
+nav.main{display:flex;gap:1.6rem;align-items:center}
+nav.main a{font-family:var(--head);text-transform:uppercase;letter-spacing:.14em;font-size:.95rem;opacity:.85;transition:opacity .2s,color .2s}
+nav.main a:hover{opacity:1;color:var(--gold-soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--head);text-transform:uppercase;letter-spacing:.14em;font-weight:600;font-size:1rem;padding:.85rem 1.6rem;border-radius:999px;transition:transform .2s, background .25s, color .25s, box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#111}
+.btn-gold:hover{background:var(--gold-soft);box-shadow:0 10px 30px -10px rgba(184,149,90,.7)}
+.btn-ghost{border:1px solid rgba(255,255,255,.4)}
+.btn-ghost:hover{background:#fff;color:#111}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:12px;width:18px;height:2px;background:#fff;content:"";transition:transform .25s}
+.burger span{top:21px}.burger span::before{top:-6px;left:0}.burger span::after{top:6px;left:0}
+.burger.open span{background:transparent}.burger.open span::before{transform:translateY(6px) rotate(45deg)}.burger.open span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;position:relative}
+.split{display:flex;flex:1;min-height:100svh}
+.panel{position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:7rem clamp(1.5rem,4vw,4rem) 4.5rem;overflow:hidden;transition:flex .6s cubic-bezier(.2,.7,.2,1);isolation:isolate}
+.panel::before{content:"";position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.panel:hover::before{transform:scale(1.05)}
+.panel-adult{background:#0d0d0d}
+.panel-adult::before{background-image:linear-gradient(180deg,rgba(13,13,13,.35),rgba(13,13,13,.92)),url('assets/hero-adulto.jpg'),radial-gradient(circle at 30% 30%,#2a2a2a,#0d0d0d 70%)}
+.panel-kids{background:var(--kids-sky);color:#17304f}
+.panel-kids::before{background-image:linear-gradient(180deg,rgba(220,235,248,.2),rgba(220,235,248,.9)),url('assets/hero-kids.jpg'),radial-gradient(circle at 70% 30%,#fff,#cfe3f6 70%)}
+.panel h2{margin:.5rem 0 .4rem;font-size:clamp(2.6rem,6vw,5rem)}
+.panel-kids h2{font-family:var(--kidfont);text-transform:none;font-weight:800;letter-spacing:0;line-height:.95}
+.panel-kids h2 .c1{color:var(--kids-blue)}.panel-kids h2 .c2{color:var(--kids-red)}
+.panel p{max-width:34ch;opacity:.85;margin-bottom:1.5rem}
+.panel .eyebrow{color:var(--gold)}
+.panel-kids .eyebrow{color:var(--kids-blue);font-family:var(--kidfont);letter-spacing:.2em;font-weight:700}
+.panel .script-line{font-family:var(--script);font-size:1.8rem;color:var(--gold-soft);margin-bottom:.2rem}
+.btn-kids{background:var(--kids-blue);color:#fff;font-family:var(--kidfont);text-transform:none;letter-spacing:0;font-size:1.1rem;font-weight:700;box-shadow:0 5px 0 #1d5bb0}
+.btn-kids:hover{box-shadow:0 8px 0 #1d5bb0}
+@media (hover:hover) and (min-width:861px){
+  .split:hover .panel{flex:.85}
+  .split .panel:hover{flex:1.25}
+}
+.hero-center{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);z-index:5;text-align:center;pointer-events:none;width:min(560px,90%)}
+.status-wrap{position:absolute;left:50%;top:86px;transform:translateX(-50%);z-index:5}
+.hero-center img.logo{width:clamp(150px,22vw,230px);height:auto;margin:0 auto;border-radius:50%;box-shadow:0 20px 60px -15px rgba(0,0,0,.6)}
+.status{display:inline-flex;align-items:center;gap:.55rem;padding:.45rem 1rem;border-radius:999px;background:rgba(13,13,13,.88);backdrop-filter:blur(6px);border:1px solid var(--line);font-size:.9rem;color:#fff;white-space:nowrap}
+.status i{width:9px;height:9px;border-radius:50%;background:#888;display:inline-block}
+.status.open i{background:#3fd069;box-shadow:0 0 0 0 rgba(63,208,105,.7);animation:pulse 2s infinite}
+.status.closed i{background:#e5484d}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(63,208,105,0)}100%{box-shadow:0 0 0 0 rgba(63,208,105,0)}}
+.scroll-cue{position:absolute;bottom:1.2rem;left:50%;translate:-50% 0;z-index:5;font-family:var(--head);letter-spacing:.3em;font-size:.75rem;text-transform:uppercase;opacity:.7;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+
+/* Marquee */
+.strip{background:var(--gold);color:#111;overflow:hidden;white-space:nowrap;padding:.9rem 0}
+.strip .track{display:inline-flex;gap:2.5rem;animation:slide 28s linear infinite;font-family:var(--head);font-weight:600;letter-spacing:.3em;text-transform:uppercase;font-size:1.1rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* Sections */
+section{padding:clamp(4rem,9vw,7rem) 0}
+.about .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.about p{color:rgba(255,255,255,.78);max-width:52ch;margin-bottom:1rem}
+.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.num{border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem 1rem;text-align:center}
+.num b{display:block;font-family:var(--head);font-size:clamp(2.2rem,5vw,3.4rem);color:var(--gold-soft);line-height:1}
+.num span{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+
+/* Themed sections (adult default, kids on selection) */
+.themed{--bg:#111;--fg:#fff;--muted:rgba(255,255,255,.65);--card:#1a1a1a;--card-line:rgba(255,255,255,.1);--accent:var(--gold);--accent-ink:#111;background:var(--bg);color:var(--fg);transition:background .5s,color .5s}
+body[data-area="kids"] .themed{--bg:var(--kids-sky);--fg:#17304f;--muted:rgba(23,48,79,.7);--card:#fff;--card-line:rgba(23,48,79,.1);--accent:var(--kids-blue);--accent-ink:#fff}
+.themed .eyebrow{color:var(--accent)}
+body[data-area="kids"] .themed h2,body[data-area="kids"] .themed h3{font-family:var(--kidfont);text-transform:none;letter-spacing:0;font-weight:800}
+.tabs{display:inline-flex;padding:5px;border-radius:999px;background:var(--card);border:1px solid var(--card-line);margin:.6rem 0 2rem}
+.tabs button{padding:.7rem 1.6rem;border-radius:999px;font-family:var(--head);text-transform:uppercase;letter-spacing:.14em;font-size:1rem;color:var(--muted);transition:background .25s,color .25s}
+body[data-area="kids"] .tabs button{font-family:var(--kidfont);text-transform:none;letter-spacing:0;font-weight:700;font-size:1.05rem}
+.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.svc-list{display:grid;gap:.9rem;grid-template-columns:repeat(2,1fr)}
+.svc{background:var(--card);border:1px solid var(--card-line);border-radius:var(--radius);padding:1.4rem 1.5rem;display:flex;align-items:center;gap:1rem;justify-content:space-between;transition:transform .25s,border-color .25s}
+.svc:hover{transform:translateY(-3px);border-color:var(--accent)}
+.svc h3{font-size:1.5rem;margin-bottom:.2rem}
+.svc p{font-size:.95rem;color:var(--muted)}
+.svc .price{font-family:var(--head);font-size:1.7rem;color:var(--accent);white-space:nowrap;text-align:right}
+body[data-area="kids"] .svc .price{font-family:var(--kidfont);font-weight:800}
+.svc .price small{display:block;font-size:.8rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;font-family:var(--body);font-weight:500}
+.svc .pick{margin-top:.6rem;font-size:.85rem;font-family:var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding:0}
+.note{font-size:.9rem;color:var(--muted);margin-top:1.4rem}
+
+/* Gallery */
+.gallery{background:#0a0a0a}
+.g-grid{columns:3 260px;column-gap:1rem}
+.g-grid button{display:block;width:100%;margin-bottom:1rem;border-radius:var(--radius);overflow:hidden;position:relative}
+.g-grid img{width:100%;height:auto;transition:transform .6s}
+.g-grid button:hover img{transform:scale(1.05)}
+dialog.lb{border:0;background:transparent;max-width:min(92vw,900px);max-height:90vh;margin:auto}
+dialog.lb::backdrop{background:rgba(0,0,0,.88)}
+dialog.lb img{max-height:86vh;margin:auto;border-radius:10px}
+
+/* Videos */
+.videos{background:#111}
+.v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.v-card{background:#1a1a1a;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.v-card iframe{width:100%;height:560px;border:0;background:#000}
+.v-card a{padding:.9rem 1rem;font-family:var(--head);letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;color:var(--gold-soft)}
+
+/* Booking */
+.book-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:start}
+.book-intro p{color:var(--muted);margin-bottom:1rem;max-width:40ch}
+form.book{background:var(--card);border:1px solid var(--card-line);border-radius:20px;padding:clamp(1.2rem,3vw,2.2rem);display:grid;gap:1.6rem}
+fieldset{border:0;display:grid;gap:.7rem}
+legend{font-family:var(--head);letter-spacing:.18em;text-transform:uppercase;font-size:.95rem;color:var(--accent);margin-bottom:.5rem}
+body[data-area="kids"] legend{font-family:var(--kidfont);text-transform:none;letter-spacing:0;font-size:1.05rem;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem}
+.chip{padding:.6rem 1.05rem;border-radius:999px;border:1px solid var(--card-line);font-size:.95rem;transition:background .2s,color .2s,border-color .2s,transform .15s}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip:active{transform:scale(.96)}
+.chip.day{display:flex;flex-direction:column;align-items:center;min-width:64px;line-height:1.2;padding:.6rem .8rem;border-radius:12px}
+.chip.day small{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+.chip.day b{font-family:var(--head);font-size:1.3rem;font-weight:600}
+input[type=text]{width:100%;padding:.9rem 1rem;border-radius:12px;border:1px solid var(--card-line);background:transparent;color:inherit;font:inherit}
+input[type=text]::placeholder{color:var(--muted)}
+.hint{font-size:.88rem;color:var(--muted)}
+.submit{width:100%;padding:1.05rem;font-size:1.1rem;background:var(--accent);color:var(--accent-ink)}
+.submit[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+body[data-area="kids"] .submit{font-family:var(--kidfont);text-transform:none;letter-spacing:0;font-weight:800;box-shadow:0 5px 0 #1d5bb0}
+.summary{font-size:.95rem;padding:.9rem 1rem;border-radius:12px;background:rgba(127,127,127,.12);display:none}
+.summary.show{display:block}
+
+/* Location */
+.loc{background:#0d0d0d}
+.loc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:stretch}
+.hours{width:100%;border-collapse:collapse;margin:1rem 0 1.6rem}
+.hours td{padding:.7rem 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today td{color:var(--gold-soft);font-weight:600}
+.hours tr.off td:last-child{opacity:.6}
+.addr{font-style:normal;color:rgba(255,255,255,.8);margin-bottom:1.4rem}
+.map{border-radius:20px;overflow:hidden;min-height:380px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(.85) contrast(1.05)}
+
+footer{border-top:1px solid var(--line);padding:2.5rem 0 5.5rem;color:rgba(255,255,255,.65);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1.2rem 2.5rem;justify-content:space-between;align-items:center}
+footer a:hover{color:var(--gold-soft)}
+
+.fab{position:fixed;right:1rem;bottom:1rem;z-index:40;background:#1fa855;color:#fff;border-radius:999px;padding:.85rem 1.3rem;display:flex;align-items:center;gap:.6rem;font-family:var(--head);letter-spacing:.14em;text-transform:uppercase;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);transition:transform .2s}
+.fab:hover{transform:translateY(-3px)}
+.fab svg{width:20px;height:20px;fill:#fff}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .about .grid,.book-grid,.loc-grid{grid-template-columns:1fr;gap:2rem}
+  .v-grid{grid-template-columns:1fr;max-width:420px;margin-inline:auto}
+}
+@media (max-width:860px){
+  .burger{display:block}
+  nav.main{position:fixed;inset:68px 0 auto 0;background:rgba(13,13,13,.97);flex-direction:column;padding:1.5rem 0 2rem;gap:1.2rem;transform:translateY(-130%);transition:transform .35s;border-bottom:1px solid var(--line);z-index:49}
+  nav.main.open{transform:none}
+  .split{flex-direction:column}
+  .panel{min-height:50svh;padding:5.5rem 1.5rem 2.5rem}
+  .panel-kids{padding-top:3.5rem}
+  .panel-adult{padding-top:9.5rem;padding-bottom:3rem}
+  .hero-center{display:none}
+  .status-wrap{left:1.5rem;transform:none;top:82px}
+  .scroll-cue{display:none}
+  .svc-list{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .numbers{grid-template-columns:1fr 1fr 1fr;gap:.6rem}
+  .num{padding:1.1rem .4rem}
+  .fab span{display:none}
+  .fab{padding:.95rem}
+  .v-card iframe{height:520px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body data-area="adulto">
+
+<header class="top" id="topbar">
+  <div class="wrap">
+    <a href="#inicio" class="brand" aria-label="Daniel Barber Shop – início">
+      <img src="assets/logo.png" alt="" onerror="this.remove()">
+      <span class="name">Daniel<small>Barber Shop</small></span>
+    </a>
+    <nav class="main" id="nav" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#cortes" id="navCortes" hidden>Cortes</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#local">Local</a>
+      <a href="#agendar" class="btn btn-gold">Agendar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="split">
+      <a class="panel panel-adult" href="#servicos" data-go="adulto">
+        <span class="eyebrow">Área Adulta</span>
+        <h2>Barba<br>Cabelo<br>Bigode</h2>
+        <p>Corte de qualidade para homens de todas as idades, no estilo que combina com você.</p>
+        <span class="btn btn-gold">Ver cortes e valores</span>
+      </a>
+      <a class="panel panel-kids" href="#servicos" data-go="kids">
+        <span class="eyebrow">Área Kids</span>
+        <h2><span class="c1">Kids</span><br><span class="c2">Club</span></h2>
+        <p>Um espaço separado, pensado para os pequenos cortarem o cabelo à vontade.</p>
+        <span class="btn btn-kids">Ver cortes e valores</span>
+      </a>
+    </div>
+    <div class="hero-center">
+      <img class="logo" src="assets/logo.png" alt="Daniel Barber Shop e Kids Club" onerror="this.remove()">
+      <h1 class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Daniel Barber Shop – Barbearia em Goiânia</h1>
+    </div>
+    <div class="status-wrap"><div class="status" id="status" role="status"><i></i><span>Verificando horário…</span></div></div>
+    <div class="scroll-cue">Role</div>
+  </div>
+
+  <div class="strip" aria-hidden="true">
+    <div class="track">
+      <span>Barba</span><span>•</span><span>Cabelo</span><span>•</span><span>Bigode</span><span>•</span><span>Kids Club</span><span>•</span><span>Goiânia</span><span>•</span>
+      <span>Barba</span><span>•</span><span>Cabelo</span><span>•</span><span>Bigode</span><span>•</span><span>Kids Club</span><span>•</span><span>Goiânia</span><span>•</span>
+    </div>
+  </div>
+
+  <section class="about" id="sobre">
+    <div class="wrap grid">
+      <div class="reveal">
+        <span class="eyebrow">A barbearia</span>
+        <h2>Há 5 anos cuidando do seu <span class="script" style="color:var(--gold-soft);font-size:1.15em">visual</span></h2>
+        <p>A Daniel Barber Shop atende em Goiânia homens de todas as idades, com um foco só: qualidade em cada corte. Aqui você escolhe o barbeiro, o horário e vem sentar na cadeira.</p>
+        <p>Os pequenos têm o próprio espaço. A área kids é separada da área adulta, para criança e pai ficarem tranquilos.</p>
+        <a href="#agendar" class="btn btn-gold" style="margin-top:.8rem">Agendar meu horário</a>
+      </div>
+      <div class="numbers reveal">
+        <div class="num"><b data-count="5">5</b><span>Anos de casa</span></div>
+        <div class="num"><b>2</b><span>Áreas separadas</span></div>
+        <div class="num"><b>6</b><span>Dias por semana</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="themed" id="servicos">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Serviços e valores</span>
+        <h2 id="svcTitle">Escolha seu corte</h2>
+        <div class="tabs" role="tablist" aria-label="Área">
+          <button role="tab" id="tabAdulto" aria-selected="true" data-area="adulto">Adulto</button>
+          <button role="tab" id="tabKids" aria-selected="false" data-area="kids">Kids Club</button>
+        </div>
+      </div>
+      <div class="svc-list reveal" id="svcList"></div>
+      <p class="note">Os valores são cobrados na barbearia. O agendamento pelo site não tem pagamento.</p>
+    </div>
+  </section>
+
+  <section class="gallery" id="cortes" hidden>
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Nossos cortes</span>
+        <h2>Trabalhos da casa</h2>
+      </div>
+      <div class="g-grid reveal" id="gGrid"></div>
+    </div>
+  </section>
+
+  <section class="videos" id="videos">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">No Instagram</span>
+        <h2>Veja o trabalho em vídeo</h2>
+      </div>
+      <div class="v-grid reveal" id="vGrid"></div>
+      <p style="margin-top:1.6rem"><a class="btn btn-ghost" href="https://www.instagram.com/danielbarbershopp" target="_blank" rel="noopener">Seguir @danielbarbershopp</a></p>
+    </div>
+  </section>
+
+  <section class="themed" id="agendar">
+    <div class="wrap book-grid">
+      <div class="book-intro reveal">
+        <span class="eyebrow">Agendamento</span>
+        <h2>Reserve seu horário</h2>
+        <p>Escolha o serviço, o barbeiro, o dia e o horário. Ao finalizar, abrimos o WhatsApp da barbearia com tudo preenchido para você só enviar.</p>
+        <p class="hint">Seu horário fica garantido quando a barbearia confirmar a mensagem no WhatsApp.</p>
+      </div>
+      <form class="book reveal" id="bookForm" autocomplete="off" novalidate>
+        <fieldset>
+          <legend>1. Para quem é?</legend>
+          <div class="chips" id="areaChips">
+            <button type="button" class="chip" data-area="adulto" aria-pressed="true">Adulto</button>
+            <button type="button" class="chip" data-area="kids" aria-pressed="false">Kids Club</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2. Serviço</legend>
+          <div class="chips" id="svcChips"></div>
+        </fieldset>
+        <fieldset>
+          <legend>3. Barbeiro</legend>
+          <div class="chips" id="barberChips"></div>
+        </fieldset>
+        <fieldset>
+          <legend>4. Dia</legend>
+          <div class="chips" id="dayChips"></div>
+        </fieldset>
+        <fieldset>
+          <legend>5. Horário</legend>
+          <div class="chips" id="timeChips"><span class="hint">Escolha um dia primeiro.</span></div>
+        </fieldset>
+        <fieldset>
+          <legend>6. Seu nome</legend>
+          <input type="text" id="nome" placeholder="Como podemos te chamar?" maxlength="60">
+          <p class="hint" id="nameHint" style="display:none">Se for para uma criança, coloque o nome dela.</p>
+        </fieldset>
+        <div class="summary" id="summary"></div>
+        <button type="submit" class="btn submit" id="submitBtn" disabled>Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="loc" id="local">
+    <div class="wrap loc-grid">
+      <div class="reveal">
+        <span class="eyebrow">Como chegar</span>
+        <h2>Venha nos visitar</h2>
+        <address class="addr">Avenida Otávio Lúcio, QD 1, LT 15<br>Goiânia – GO, 74475-260</address>
+        <table class="hours" id="hoursTable" aria-label="Horário de atendimento"></table>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-gold" href="https://maps.app.goo.gl/HMSJVz6WWUknvpW26" target="_blank" rel="noopener">Abrir no Google Maps</a>
+          <a class="btn btn-ghost" id="waLink" href="#" target="_blank" rel="noopener">(62) 99440-1007</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Mapa da Daniel Barber Shop" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Avenida+Ot%C3%A1vio+L%C3%BAcio%2C+QD+1+LT+15%2C+Goi%C3%A2nia+GO+74475-260&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Daniel Barber Shop · Goiânia – GO</span>
+    <span><a href="https://www.instagram.com/danielbarbershopp" target="_blank" rel="noopener">Instagram @danielbarbershopp</a> · <a id="waFoot" href="#" target="_blank" rel="noopener">WhatsApp</a></span>
+  </div>
+</footer>
+
+<a class="fab" id="fab" href="#agendar" aria-label="Agendar horário">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.4-.2-2.6.7.7-2.5-.2-.4A8 8 0 0 1 12 4zm4.2 9.900c-.2-.1-1.300-.7-1.500-.7s-.4-.1-.5.1-.6.7-.7.900-.3.2-.5.1a6.500 6.500 0 0 1-3.200-2.800c-.2-.4.200-.4.700-1.300.1-.2 0-.3 0-.4l-.7-1.600c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.7.300s-.9.900-.9 2.100 1 2.400 1.100 2.600c.1.200 1.900 3 4.700 4.100 2.300.9 2.800.7 3.300.7s1.600-.7 1.800-1.300.2-1.200.2-1.300-.2-.2-.4-.3z"/></svg>
+  <span>Agendar</span>
+</a>
+
+<dialog class="lb" id="lb"><img id="lbImg" alt="Corte realizado na Daniel Barber Shop"></dialog>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* ============================================================
+   CONFIGURAÇÃO – edite aqui para atualizar o site
+   ============================================================ */
+const CONFIG = {
+  whatsapp: '5562994401007',
+
+  // Horário de funcionamento: [abre, fecha] em horas. null = fechado.
+  // 0 = domingo ... 6 = sábado
+  hours: { 0: null, 1: [14,19], 2: [9,19], 3: [9,19], 4: [8,19], 5: [8,19], 6: [8,19] },
+
+  // Intervalo entre horários oferecidos (minutos)
+  slotMinutes: 30,
+  // Quantos dias à frente o cliente pode agendar
+  daysAhead: 14,
+
+  // Barbeiros: adicione os nomes, por exemplo ['Daniel', 'Carlos'].
+  // "Sem preferência" sempre aparece.
+  barbers: [],
+
+  // Serviços. price: número (ex.: 40) ou null para exibir "Consulte".
+  services: {
+    adulto: [
+      { name: 'Cabelo',          desc: 'Corte na tesoura ou máquina, do seu jeito.', price: null },
+      { name: 'Barba',           desc: 'Barba modelada e finalizada.',               price: null },
+      { name: 'Cabelo + Barba',  desc: 'O combo completo.',                          price: null },
+      { name: 'Bigode',          desc: 'Alinhamento e acabamento do bigode.',        price: null }
+    ],
+    kids: [
+      { name: 'Corte infantil',  desc: 'Corte para crianças na área Kids Club.',     price: null }
+    ]
+  },
+
+  // Fotos dos cortes: coloque os arquivos na pasta assets (ex.: assets/corte-1.jpg).
+  // As que não existirem simplesmente não aparecem.
+  gallery: ['corte-1.jpg','corte-2.jpg','corte-3.jpg','corte-4.jpg','corte-5.jpg','corte-6.jpg','corte-7.jpg','corte-8.jpg','corte-9.jpg'],
+
+  // Vídeos do Instagram (código que vem depois de /reel/ no link)
+  reels: ['DWmSgn6jUGV','DFAijoeRFY4','C1HaBJ8rSLd']
+};
+/* ============================================================ */
+
+const DAY_FULL  = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+const DAY_SHORT = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+const $  = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const pad = n => String(n).padStart(2,'0');
+const fmtH = h => pad(Math.floor(h)) + ':' + pad(Math.round((h%1)*60));
+
+/* Hora atual em Goiânia (Brasília) */
+function nowBR(){
+  return new Date(new Date().toLocaleString('en-US',{ timeZone:'America/Sao_Paulo' }));
+}
+
+const state = { area:'adulto', service:null, barber:'Sem preferência', date:null, time:null };
+
+/* ---------- Links de WhatsApp ---------- */
+const waBase = 'https://wa.me/' + CONFIG.whatsapp;
+$('#waLink').href = waBase + '?text=' + encodeURIComponent('Olá! Vim pelo site da Daniel Barber Shop.');
+$('#waFoot').href = $('#waLink').href;
+$('#year').textContent = nowBR().getFullYear();
+
+/* ---------- Menu mobile / header ---------- */
+const burger = $('#burger'), nav = $('#nav'), topbar = $('#topbar');
+burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+});
+$$('#nav a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
+
+/* ---------- Aberto / Fechado ---------- */
+function updateStatus(){
+  const n = nowBR(), d = n.getDay(), h = n.getHours() + n.getMinutes()/60;
+  const el = $('#status'), txt = $('span', el), todays = CONFIG.hours[d];
+  el.classList.remove('open','closed');
+  if (todays && h >= todays[0] && h < todays[1]) {
+    el.classList.add('open');
+    txt.textContent = 'Aberto agora · fecha às ' + fmtH(todays[1]);
+  } else {
+    el.classList.add('closed');
+    let next = '', i = (todays && h < todays[0]) ? 0 : 1;
+    for (; i <= 7; i++) {
+      const dd = (d + i) % 7, hh = CONFIG.hours[dd];
+      if (hh) { next = i === 0 ? 'hoje às ' + fmtH(hh[0]) : i === 1 ? 'amanhã às ' + fmtH(hh[0]) : DAY_FULL[dd] + ' às ' + fmtH(hh[0]); break; }
+    }
+    txt.textContent = 'Fechado agora · abre ' + next;
+  }
+}
+updateStatus(); setInterval(updateStatus, 60000);
+
+/* ---------- Tabela de horários ---------- */
+(function(){
+  const t = $('#hoursTable'), today = nowBR().getDay();
+  const order = [1,2,3,4,5,6,0];
+  t.innerHTML = order.map(d => {
+    const h = CONFIG.hours[d];
+    const cls = (d === today ? 'today ' : '') + (h ? '' : 'off');
+    return `<tr class="${cls}"><td>${DAY_FULL[d][0].toUpperCase() + DAY_FULL[d].slice(1)}</td><td>${h ? fmtH(h[0]) + ' – ' + fmtH(h[1]) : 'Fechado'}</td></tr>`;
+  }).join('');
+})();
+
+/* ---------- Área (adulto / kids) ---------- */
+function setArea(area, opts = {}){
+  state.area = area;
+  state.service = null;
+  document.body.dataset.area = area;
+  $$('.tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.area === area));
+  $$('#areaChips .chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.area === area));
+  $('#svcTitle').textContent = area === 'kids' ? 'Cortes do Kids Club' : 'Escolha seu corte';
+  $('#nameHint').style.display = area === 'kids' ? 'block' : 'none';
+  document.querySelector('meta[name=theme-color]').content = area === 'kids' ? '#2f7de1' : '#0d0d0d';
+  renderServices(); renderSvcChips(); updateSummary();
+}
+$$('.tabs button').forEach(b => b.addEventListener('click', () => setArea(b.dataset.area)));
+$$('#areaChips .chip').forEach(b => b.addEventListener('click', () => setArea(b.dataset.area)));
+$$('[data-go]').forEach(a => a.addEventListener('click', () => setArea(a.dataset.go)));
+
+/* ---------- Serviços ---------- */
+const money = p => p == null ? 'Consulte' : 'R$ ' + Number(p).toFixed(2).replace('.', ',').replace(',00', '');
+function renderServices(){
+  $('#svcList').innerHTML = CONFIG.services[state.area].map((s, i) => `
+    <article class="svc">
+      <div>
+        <h3>${s.name}</h3>
+        <p>${s.desc}</p>
+        <button type="button" class="pick" data-i="${i}">Agendar este serviço →</button>
+      </div>
+      <div class="price">${money(s.price)}${s.price == null ? '' : '<small>a partir de</small>'}</div>
+    </article>`).join('');
+  $$('#svcList .pick').forEach(b => b.addEventListener('click', () => {
+    state.service = CONFIG.services[state.area][b.dataset.i].name;
+    renderSvcChips(); updateSummary();
+    $('#agendar').scrollIntoView({ behavior:'smooth' });
+  }));
+}
+function renderSvcChips(){
+  const box = $('#svcChips');
+  box.innerHTML = CONFIG.services[state.area].map(s =>
+    `<button type="button" class="chip" aria-pressed="${state.service === s.name}" data-v="${s.name}">${s.name}${s.price == null ? '' : ' · ' + money(s.price)}</button>`).join('');
+  $$('.chip', box).forEach(c => c.addEventListener('click', () => { state.service = c.dataset.v; renderSvcChips(); updateSummary(); }));
+}
+
+/* ---------- Barbeiros ---------- */
+function renderBarbers(){
+  const box = $('#barberChips');
+  const list = ['Sem preferência', ...CONFIG.barbers];
+  box.innerHTML = list.map(b => `<button type="button" class="chip" aria-pressed="${state.barber === b}" data-v="${b}">${b}</button>`).join('');
+  $$('.chip', box).forEach(c => c.addEventListener('click', () => { state.barber = c.dataset.v; renderBarbers(); updateSummary(); }));
+}
+
+/* ---------- Dias e horários ---------- */
+function buildDays(){
+  const box = $('#dayChips'), base = nowBR(), items = [];
+  for (let i = 0; i <= CONFIG.daysAhead; i++) {
+    const d = new Date(base.getFullYear(), base.getMonth(), base.getDate() + i);
+    const h = CONFIG.hours[d.getDay()];
+    if (!h) continue;
+    if (i === 0) {
+      const last = h[1] - CONFIG.slotMinutes/60;
+      if (base.getHours() + base.getMinutes()/60 >= last) continue;
+    }
+    items.push(d);
+  }
+  box.innerHTML = items.map(d => {
+    const iso = d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate());
+    return `<button type="button" class="chip day" aria-pressed="${state.date === iso}" data-iso="${iso}" data-dow="${d.getDay()}"><small>${DAY_SHORT[d.getDay()]}</small><b>${pad(d.getDate())}/${pad(d.getMonth()+1)}</b></button>`;
+  }).join('');
+  $$('.chip', box).forEach(c => c.addEventListener('click', () => {
+    state.date = c.dataset.iso; state.time = null;
+    $$('.chip', box).forEach(x => x.setAttribute('aria-pressed', x === c));
+    buildTimes(Number(c.dataset.dow)); updateSummary();
+  }));
+}
+function buildTimes(dow){
+  const box = $('#timeChips'), h = CONFIG.hours[dow];
+  const base = nowBR();
+  const isToday = state.date === base.getFullYear() + '-' + pad(base.getMonth()+1) + '-' + pad(base.getDate());
+  const nowH = base.getHours() + base.getMinutes()/60;
+  const step = CONFIG.slotMinutes/60, slots = [];
+  for (let t = h[0]; t <= h[1] - step + 1e-6; t += step) {
+    if (isToday && t <= nowH + 0.25) continue;
+    slots.push(t);
+  }
+  box.innerHTML = slots.length
+    ? slots.map(t => `<button type="button" class="chip" aria-pressed="${state.time === fmtH(t)}" data-v="${fmtH(t)}">${fmtH(t)}</button>`).join('')
+    : '<span class="hint">Sem horários neste dia. Escolha outro.</span>';
+  $$('.chip', box).forEach(c => c.addEventListener('click', () => {
+    state.time = c.dataset.v;
+    $$('.chip', box).forEach(x => x.setAttribute('aria-pressed', x === c));
+    updateSummary();
+  }));
+}
+
+/* ---------- Resumo e envio ---------- */
+function dateLabel(iso){
+  const [y,m,d] = iso.split('-').map(Number);
+  const dt = new Date(y, m-1, d);
+  return DAY_FULL[dt.getDay()] + ', ' + pad(d) + '/' + pad(m);
+}
+function updateSummary(){
+  const nome = $('#nome').value.trim();
+  const ok = state.service && state.date && state.time && nome.length >= 2;
+  const sum = $('#summary');
+  if (state.service || state.date || state.time) {
+    sum.classList.add('show');
+    sum.innerHTML = '<b>Seu pedido:</b> ' + [
+      state.area === 'kids' ? 'Kids Club' : 'Adulto',
+      state.service || '—',
+      state.barber,
+      state.date ? dateLabel(state.date) : '—',
+      state.time || '—'
+    ].join(' · ');
+  } else sum.classList.remove('show');
+  $('#submitBtn').disabled = !ok;
+}
+$('#nome').addEventListener('input', updateSummary);
+$('#bookForm').addEventListener('submit', e => {
+  e.preventDefault();
+  updateSummary();
+  if ($('#submitBtn').disabled) return;
+  const msg = [
+    'Olá! Gostaria de agendar na Daniel Barber Shop.',
+    '',
+    'Área: ' + (state.area === 'kids' ? 'Kids Club' : 'Adulto'),
+    'Serviço: ' + state.service,
+    'Barbeiro: ' + state.barber,
+    'Data: ' + dateLabel(state.date),
+    'Horário: ' + state.time,
+    'Nome: ' + $('#nome').value.trim(),
+    '',
+    'Pode confirmar?'
+  ].join('\n');
+  window.open(waBase + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+});
+
+/* ---------- Galeria (só mostra o que existir em assets) ---------- */
+(function(){
+  const grid = $('#gGrid'), lb = $('#lb'), lbImg = $('#lbImg');
+  let loaded = 0;
+  CONFIG.gallery.forEach(file => {
+    const img = new Image();
+    img.onload = () => {
+      loaded++;
+      const b = document.createElement('button');
+      b.type = 'button'; b.setAttribute('aria-label', 'Ampliar foto');
+      img.alt = 'Corte realizado na Daniel Barber Shop'; img.loading = 'lazy';
+      b.appendChild(img);
+      b.addEventListener('click', () => { lbImg.src = img.src; lb.showModal(); });
+      grid.appendChild(b);
+      $('#cortes').hidden = false; $('#navCortes').hidden = false;
+    };
+    img.src = 'assets/' + file;
+  });
+  lb.addEventListener('click', () => lb.close());
+})();
+
+/* ---------- Vídeos do Instagram ---------- */
+(function(){
+  const g = $('#vGrid');
+  g.innerHTML = CONFIG.reels.map(id => `
+    <div class="v-card">
+      <iframe loading="lazy" title="Vídeo do Instagram da Daniel Barber Shop" src="https://www.instagram.com/reel/${id}/embed" allowfullscreen></iframe>
+      <a href="https://www.instagram.com/reel/${id}/" target="_blank" rel="noopener">Ver no Instagram →</a>
+    </div>`).join('');
+})();
+
+/* ---------- Animações de entrada ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold:.12 });
+$$('.reveal').forEach(el => io.observe(el));
+
+/* ---------- Botão flutuante: some na seção de agendamento ---------- */
+const fab = $('#fab');
+new IntersectionObserver(es => es.forEach(e => fab.style.display = e.isIntersecting ? 'none' : 'flex'), { threshold:.25 }).observe($('#agendar'));
+
+/* Início */
+renderBarbers(); buildDays(); setArea('adulto');
+</script>
+</body>
+</html>
